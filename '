@@ -1,0 +1,18 @@
+fn main() {
+    let mut num_minus_one: u64 = 1;
+    let mut num_minus_two: u64 = 2;
+    let mut num: u64 = 2;
+    loop {
+        let mut temp: u32 = num_minus_one;
+        num_minus_one = num_minus_two + num_minus_one;
+        num_minus_two = num_minus_one;
+        if num_minus_one % 2 == 0 {
+           num = num_minus_one + num; 
+        }
+        println!("{num_minus_one}");
+        if num_minus_one >= 4 {
+           break; 
+        }
+    }
+    println!("{num}");
+}
